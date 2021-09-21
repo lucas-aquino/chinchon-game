@@ -4,7 +4,8 @@ public enum Palo {
 	ORO("Oro", "ORO", "O", "*"),
 	ESPADA("Espada", "ESP", "E", "/"),
 	COPA("Copa", "CPA", "C", "Y"),
-	BASTO("Basto", "BST", "B", "!");
+	BASTO("Basto", "BST", "B", "!"),
+	COMODIN("Comodin", "JKR", "J", "¿");
 	
 	private String nombre, abreviacion, inicial, simbolo;
 	
