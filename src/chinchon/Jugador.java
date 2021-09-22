@@ -7,6 +7,15 @@ public class Jugador {
 	private Set<Carta> mano;
 	
 	public  Jugador() {
-		mano = new TreeSet<Carta>();
+		this.mano = new TreeSet<Carta>();
+	}
+	
+	public void juntarCarta(Mazo mazo) {
+		if(this.mano.size() < 7)
+			this.agregarCarta(mazo.darCarta());
+	}
+	
+	public void agregarCarta(Carta carta) {
+		this.mano.add(carta);
 	}
 }

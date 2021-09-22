@@ -1,6 +1,6 @@
 package chinchon;
 
-public class Carta {
+public class Carta implements Comparable<Carta>{
 	private Palo palo;
 	private Integer numero;
 	
@@ -55,5 +55,11 @@ public class Carta {
 	@Override
 	public String toString() {
 		return this.numero + " " + this.palo.getInicial();
+	}
+
+	@Override
+	public int compareTo(Carta o) {
+		this.getPalo().compareTo(o.getPalo());
+		return this.getNumero().compareTo(o.getNumero());
 	}
 }

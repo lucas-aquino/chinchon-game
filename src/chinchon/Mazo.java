@@ -27,6 +27,20 @@ public class Mazo {
 		Collections.shuffle(this.cartas);
 	}
 
+	public Carta darCarta() {
+		return this.cartas.pop();
+	}
+	
+	public void cargarCartasDePila(Stack<Carta> pila) {
+		if(!this.hayCartas()) {
+			Carta ultimaCarta = pila.pop();
+			this.cartas.addAll(pila);
+			pila.clear();
+			pila.add(ultimaCarta);
+			this.mezclar();
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "Mazo [" + cartas + "]";
